@@ -75,18 +75,18 @@ def _build_reason(
     if label == 0:
         if volatility < 0.15:
             return (
-                f"Prediction (£{predicted:,.0f}) is within the stable 7-day range "
-                f"(avg £{avg_7:,.0f}, σ £{std_7:,.0f}). Low volatility – safe to automate."
+                f"Prediction ({predicted:,.0f}) is within the stable 7-day range "
+                f"(avg {avg_7:,.0f}, σ {std_7:,.0f}). Low volatility – safe to automate."
             )
         return (
-            f"Prediction (£{predicted:,.0f}) deviates {pct_diff:.1f}% from 7-day avg "
+            f"Prediction ({predicted:,.0f}) deviates {pct_diff:.1f}% from 7-day avg "
             f"but the model is confident ({confidence:.0%}). Proceeding automatically."
         )
     else:
         if pct_diff > 30:
             return (
-                f"Prediction (£{predicted:,.0f}) is {pct_diff:.1f}% above/below the "
-                f"7-day average (£{avg_7:,.0f}). Unusual demand pattern detected – "
+                f"Prediction ({predicted:,.0f}) is {pct_diff:.1f}% above/below the "
+                f"7-day average ({avg_7:,.0f}). Unusual demand pattern detected – "
                 "escalating for human review."
             )
         if volatility > 0.4:

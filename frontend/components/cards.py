@@ -27,7 +27,7 @@ def prediction_card(predicted_sales: float, decision: str, reason: str, confiden
                 <div>
                     <p style="margin:0; color:#7f8c8d; font-size:13px;">PREDICTED SALES</p>
                     <p style="margin:0; font-size:36px; font-weight:700; color:#2c3e50;">
-                        £{predicted_sales:,.0f}
+                        {predicted_sales:,.0f}
                     </p>
                 </div>
                 <div>

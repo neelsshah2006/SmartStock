@@ -83,7 +83,7 @@ def render():
                     with kpi2:
                         info_card("Predict Date", data["sale_date"],            "")
                     with kpi3:
-                        info_card("Predicted Sales", f"£{data['predicted_sales']:,.0f}", "")
+                        info_card("Predicted Sales", f"{data['predicted_sales']:,.0f}", "")
                     with kpi4:
                         info_card("Decision",    data["halt_decision"],         "")
 

@@ -42,7 +42,7 @@ def render():
                     body = resp.json()
                     success_alert(
                         f"Record saved for Store {result['store']} on {result['sale_date']} "
-                        f"(Sales: £{result['sales']:,.0f}). Document ID: `{body['id']}`"
+                        f"(Sales: {result['sales']:,.0f}). Document ID: `{body['id']}`"
                     )
                     if body.get("warnings"):
                         for w in body["warnings"]:
