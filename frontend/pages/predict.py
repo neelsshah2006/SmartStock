@@ -72,7 +72,7 @@ def render():
 
         with st.spinner("Fetching history & running prediction pipeline …"):
             try:
-                resp = requests.post(f"{API_BASE}/predict", json=payload, timeout=30)
+                resp = requests.post(f"{API_BASE}/predict", json=payload, timeout=120)
 
                 if resp.status_code == 200:
                     data = resp.json()

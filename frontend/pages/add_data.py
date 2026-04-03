@@ -37,7 +37,7 @@ def render():
     if result:
         with st.spinner("Saving to database …"):
             try:
-                resp = requests.post(f"{API_BASE}/new", json=result, timeout=10)
+                resp = requests.post(f"{API_BASE}/new", json=result, timeout=120)
                 if resp.status_code == 201:
                     body = resp.json()
                     success_alert(
