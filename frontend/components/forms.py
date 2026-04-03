@@ -27,7 +27,7 @@ def sale_record_form() -> dict | None:
 
         st.markdown("### 💰 Sales")
         sales = st.number_input(
-            "Actual Sales ()",
+            "Actual Sales",
             min_value=1.0,
             max_value=10_000_000.0,
             value=5000.0,
